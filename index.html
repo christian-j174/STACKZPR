@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackz Technoligies</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b1c54b17e4.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <div class="navbar-brand font-main d-flex align-items-center p-1">
+          <img class="mx-2"
+            src="./images/logo-dark-clear.png"
+            alt="logo"
+            height="30"
+            width="30"
+          />
+          <a class="navbar-brand" href="index.html" style="font-size: 1.3em;">Stackz Technologies</a>
+        </div>
+      </div>
+    </nav>
+    <!-- HEADER -->
+    <div class="css-selector text-center">
+      <div
+        class="mask p-5"
+        style="min-height: 100%"
+      >
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="text-light">
+            <h1 class="mb-3 font-main">
+              Building Better
+              <strong class="text-success">Technology</strong> Together
+            </h1>
+            <button id="scroll-contact" type="button" class="shadow-lg btn btn-outline-light" style="font-size: 1.15em;">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var button = document.getElementById("scroll-contact")
+      button.addEventListener("click",(e)=>{
+          e.preventDefault();
+          var contact2 = document.getElementById("contact-div");
+          contact2.scrollIntoView({behavior: "smooth", block: "center"});
+      })
+    </script>
+
+    <!--Features-->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <h4 class="font-main shadow rounded p-1 features-headers">
+                Solutions Adapted to yout needs.</h4>
+                <hr class="dashed"></hr>
+                <p class="font-main">
+                    At Stackz, we provide custom software development and consulting services designed to 
+                    meet your unique business needs. Our team of experts will work
+                     closely with you to understand your goals and challenges,
+                      and develop tailored solutions that are flexible, scalable, 
+                      and designed to grow with your business. Contact us to learn how we can
+                       help you achieve your business goals with the power of technology
+                </p>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <i class="fa-sharp fa-solid fa-handshake" style="font-size:10em; position:relative; top:20%;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row ">
+        <div class="col">
+          <h4 class="font-main shadow p-1 rounded features-headers">
+            Next-Generation Technology for Your Business
+          </h4>
+          <hr class="dashed">
+          <p class="font-main">
+            We are dedicated to staying ahead of the curve when it comes to technology. We use the latest and most innovative tools and technologies to create solutions that drive results and exceed expectations. Our team of experts is always exploring new and emerging technologies to make sure that we can offer our clients the best possible solutions for their business needs. With Stackz, you can be sure that your projects are powered by the latest technology, so you can stay ahead of the competition and achieve your business goals.
+          </p>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <i class="fa-solid fa-microchip" style="font-size: 10em; position:relative; top:20%;"></i>
+        </div>
+      </div>
+    </div>
+    <!--Contact Us-->
+    <div id="contact-div" class="container shadow rounded mt-5 p-5" style="max-width: fit-content;">
+      <div class="d-flex justify-content-center">
+        <h2 class="font-main"><bold>Contact Us!</bold></h2>
+      </div>
+      <form class="font-main" id="contact-info">
+        <div class="my-3">
+          <label for="name-input" class="form-label"><i class="fa fa-user" aria-hidden="true"></i> Name<strong style="color: red;">*</strong></label>
+          <input id="name-input" class="form-control" placeholder="Please Input Your Name" type="text" style="width: 50vh;" required>
+        </div>
+        <div class="my-3">
+          <label for="email-input" class="form-label"><i class="fas fa-mail-bulk    "></i> E-mail<strong style="color: red;">*</strong></label>
+          <input id="email-input" class="form-control" type="email" placeholder="email@example.com" required>
+        </div>
+        <div class="my-3">
+          <label for="phone-input" class="form-label"><i class="fa fa-phone" aria-hidden="true"></i> Phone Number</label>
+          <input id="phone-input" class="form-control" type="text" pattern="[0-9]{10}"  placeholder="Please Enter a Phone #">
+        </div>
+        <div class="my-3">
+          <label for="service-select" class="form-label"><i class="fa-solid fa-briefcase"></i> What do you want to do with us?<strong style="color: red;">*</strong></label>
+          <select class="form-select" id="service-select" required>
+            <option selected>Consulting</option>
+            <option>Development</option>
+            <option>Cloud & Networking</option>
+            <option>Support</option>
+          </select>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <button type="submit" class="spinner-btn btn btn-outline-success"><h5>Submit</h5></button>
+        </div>
+      </form>
+      <script src="./app.js"></script>
+    </div>
+    <!--Footer-->
+    <footer>
+      <div class="container-fluid mt-5 p-0">
+        <div class="card bg-white">
+            <div class="row mb-4">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="footer-text pull-left">
+                        <div class="d-flex">
+                            <img class="align-self-center" src="./images/logo-dark-clear.png" alt="logo" style="height : 40px; width: 40px;">
+                            <h1 class="font-main align-self-center">Stackz</h1>
+                        </div>
+                        <p class="card-text">We deliver customized solutions using cutting-edge technology to help businesses succeed. Contact us to learn more about how we can help you thrive in the digital age.</p>
+                        <div class="social mt-2 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-linkedin-square fa-lg"></i> <i class="fa fa-facebook"></i> </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <h5 class="heading">Services</h5>
+                    <ul>
+                        <li>Consulting</li>
+                        <li>Development</li>
+                        <li>Cloud & Networking</li>
+                        <li>Support</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <h5 class="heading">Industries</h5>
+                    <ul class="card-text">
+                        <li>Finance</li>
+                        <li>Public Sector</li>
+                        <li>Smart Office</li>
+                        <li>Retail</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <h5 class="heading">Company</h5>
+                    <ul class="card-text">
+                        <li>About Us</li>
+                        <li>Blog</li>
+                        <li>Contact</li>
+                        <li>Join Us</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="divider mb-4"> </div>
+            <div class="row" style="font-size:10px;">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="pull-left">
+                        <p><i class="fa fa-copyright"></i> 2023 Stackz</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+  </body>
+</html>
